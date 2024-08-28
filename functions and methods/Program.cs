@@ -5,16 +5,21 @@ void WritingSomething()
 }
 Console.WriteLine("This is outside the method");
 
-//calling method
-WritingSomething();
-
 //A method that has a parameter string mystring
 void WriteSomethingSpecific(string mystring)
 {
     Console.WriteLine(mystring);
 }
 
+int AddIntegers(int num1, int num2)
+{
+    return num1 + num2;
+}
 
-WriteSomethingSpecific("benjamin");
+
+// calling method
+int result = AddIntegers(2, 2);
+Console.WriteLine(result);
+
 
 Console.ReadKey();
