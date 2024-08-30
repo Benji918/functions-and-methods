@@ -1,25 +1,23 @@
-﻿//declaring a method
-void WritingSomething()
+﻿namespace functions_methods
 {
-    Console.WriteLine("I'm writing something");
+    internal class Program
+    {
+        //Field (can also be called global vairable)
+        static int result;
+        static void Main(string[] args)
+        {
+
+            // calling method
+            result = AddIntegers(2, 2);
+            Console.WriteLine(result);
+
+            Console.ReadKey();
+        }
+
+        static int AddIntegers(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+
+    }
 }
-Console.WriteLine("This is outside the method");
-
-//A method that has a parameter string mystring
-void WriteSomethingSpecific(string mystring)
-{
-    Console.WriteLine(mystring);
-}
-
-int AddIntegers(int num1, int num2)
-{
-    return num1 + num2;
-}
-
-
-// calling method
-int result = AddIntegers(2, 2);
-Console.WriteLine(result);
-
-
-Console.ReadKey();
